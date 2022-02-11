@@ -1,0 +1,12 @@
+# build
+dist
+
+# log
+npm-debug.log*
+
+# dependencies
+node_modules
+
+# misc
+.cache
+.DS_Store
