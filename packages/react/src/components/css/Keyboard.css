@@ -1,0 +1,4 @@
+.keycap-keyboard-container {
+  display: flex;
+  flex-direction: column;
+}
