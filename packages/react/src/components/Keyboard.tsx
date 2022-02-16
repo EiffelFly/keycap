@@ -9,9 +9,19 @@ const Keyboard: FC<KeyboardProps> = () => {
     <div className="keycap-keyboard-container">
       {getKeyboardLayout().default.map((row, index) => (
         <div className="keycap-keyboard-row" key={`keycap-row-${index}`}>
-          {row.split(" ").map((keycap) => (
-            <div>{keycap}</div>
-          ))}
+          {row.split(" ").map((keycap) => {
+            return (
+              <div
+                className={
+                  keycap.match(/{*.}/)
+                    ? "keycap-special-key"
+                    : "keycap-standard-key"
+                }
+              >
+                {keycap}
+              </div>
+            );
+          })}
         </div>
       ))}
     </div>
