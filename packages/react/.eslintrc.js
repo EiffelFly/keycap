@@ -1,1 +1,1 @@
-module.exports = require("keycap-config/eslint-preset");
+module.exports = require("@keycap/config/eslint-preset");
