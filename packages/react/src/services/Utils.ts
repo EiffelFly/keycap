@@ -1,7 +1,7 @@
 export const specialKeyDisplayName: { [key: string]: string } = {
   "{bksp}": "backspace",
   "{backspace}": "backspace",
-  "{enter}": "< enter",
+  "{enter}": "enter",
   "{shift}": "shift",
   "{shiftleft}": "shift",
   "{shiftright}": "shift",
