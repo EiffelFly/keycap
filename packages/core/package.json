@@ -1,0 +1,14 @@
+{
+  "name": "@keycap/core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "EiffelFly",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@keycap/config": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
