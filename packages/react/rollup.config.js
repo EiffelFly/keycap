@@ -1,9 +1,12 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
-import external from "rollup-plugin-peer-deps-external";
-import typescript from "rollup-plugin-typescript2";
-import dts from "rollup-plugin-dts";
+import {
+  CONFIG_BABEL,
+  CONFIG_TYPESCRIPT,
+  dts,
+  external,
+  resolve,
+  typescript,
+  terser,
+} from "../../rollup.config.js";
 
 const packageJson = require("./package.json");
 
@@ -26,9 +29,9 @@ export default [
     plugins: [
       external(),
       resolve(),
-      commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript(CONFIG_TYPESCRIPT),
       terser(),
+      babel(CONFIG_BABEL),
     ],
   },
   {
