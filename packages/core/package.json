@@ -1,10 +1,12 @@
 {
   "name": "@keycap/core",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "EiffelFly",
   "license": "MIT",
   "private": true,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c"
   },
