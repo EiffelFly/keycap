@@ -4,11 +4,11 @@ export interface KeyBindInfo {
   platform: "mac" | "window" | "linux";
   browser: "chrome" | "webkit" | "firefox";
   capturable: boolean;
-  /** If the keybind will only be valid under specific condition
-   * If the keybind don't make visual change but it still triggered, then 
+  /** If the keybind will only be valid under specific condition.
+   * For example, if the keybind don't make visual change but it still triggered, then 
    * the keybind doesn't count as conditional. Like Meta+2, when there has
    * no second tab, this key will still be triggered but without action, this
-   * key doesn't count as conditional
+   * key doesn't count as conditional.
   */
   conditional: boolean; 
   condition?: string; 
