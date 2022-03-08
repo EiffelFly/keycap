@@ -12,6 +12,7 @@ export interface KeyBindInfo {
   */
   conditional: boolean; 
   condition?: string; 
+  type: "browserDefault" | "userDefined" | "appPreset"
 }
 
 export interface BrowserKeybindSet {
