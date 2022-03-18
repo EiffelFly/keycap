@@ -1,8 +1,8 @@
 import { KeyBindInfo } from "../type/general";
 
 export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
-  "Meta+a": {
-    id: "Meta+a",
+  "meta+a": {
+    id: "meta+a",
     type: "browserDefault",
     name: "Select all",
     platform: "mac",
@@ -10,8 +10,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+n": {
-    id: "Meta+n",
+  "meta+n": {
+    id: "meta+n",
     type: "browserDefault",
     name: "Open a new window",
     platform: "mac",
@@ -19,8 +19,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+n": {
-    id: "Meta+Shift+n",
+  "meta+shift+n": {
+    id: "meta+shift+n",
     type: "browserDefault",
     name: "Open a new window in Incognito mode",
     platform: "mac",
@@ -28,8 +28,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+t": {
-    id: "Meta+t",
+  "meta+t": {
+    id: "meta+t",
     type: "browserDefault",
     name: "Open a new tab, and jump to it",
     platform: "mac",
@@ -37,8 +37,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+t": {
-    id: "Meta+Shift+t",
+  "meta+shift+t": {
+    id: "meta+shift+t",
     type: "browserDefault",
     name: "Reopen previously closed tabs in the order they were closed",
     platform: "mac",
@@ -46,8 +46,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Option+ArrowRight": {
-    id: "Meta+Option+ArrowRight",
+  "meta+option+arrowRight": {
+    id: "meta+option+arrowRight",
     type: "browserDefault",
     name: "Jump to the next open tab",
     platform: "mac",
@@ -55,8 +55,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Option+ArrowLeft": {
-    id: "Meta+Option+ArrowLeft",
+  "meta+option+arrowleft": {
+    id: "meta+option+arrowleft",
     type: "browserDefault",
     name: "Jump to the previous open tab",
     platform: "mac",
@@ -64,8 +64,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+1": {
-    id: "Meta+1",
+  "meta+1": {
+    id: "meta+1",
     type: "browserDefault",
     name: "Jump to tab 1",
     platform: "mac",
@@ -73,8 +73,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+2": {
-    id: "Meta+2",
+  "meta+2": {
+    id: "meta+2",
     type: "browserDefault",
     name: "Jump to tab 2",
     platform: "mac",
@@ -82,8 +82,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+3": {
-    id: "Meta+3",
+  "meta+3": {
+    id: "meta+3",
     type: "browserDefault",
     name: "Jump to tab 3",
     platform: "mac",
@@ -91,8 +91,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+4": {
-    id: "Meta+4",
+  "meta+4": {
+    id: "meta+4",
     type: "browserDefault",
     name: "Jump to tab 4",
     platform: "mac",
@@ -100,8 +100,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+5": {
-    id: "Meta+5",
+  "meta+5": {
+    id: "meta+5",
     type: "browserDefault",
     name: "Jump to tab 5",
     platform: "mac",
@@ -109,8 +109,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+6": {
-    id: "Meta+6",
+  "meta+6": {
+    id: "meta+6",
     type: "browserDefault",
     name: "Jump to tab 6",
     platform: "mac",
@@ -118,8 +118,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+7": {
-    id: "Meta+4",
+  "meta+7": {
+    id: "meta+4",
     type: "browserDefault",
     name: "Jump to tab 7",
     platform: "mac",
@@ -127,8 +127,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+8": {
-    id: "Meta+8",
+  "meta+8": {
+    id: "meta+8",
     type: "browserDefault",
     name: "Jump to tab 8",
     platform: "mac",
@@ -136,8 +136,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+9": {
-    id: "Meta+9",
+  "meta+9": {
+    id: "meta+9",
     type: "browserDefault",
     name: "Jump to tab last tab",
     platform: "mac",
@@ -145,8 +145,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+ArrowRight": {
-    id: "Meta+ArrowRight",
+  "meta+arrowRight": {
+    id: "meta+arrowRight",
     type: "browserDefault",
     name: "Open the next page in your browsing history for the current tab",
     platform: "mac",
@@ -154,8 +154,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+BracketRight": {
-    id: "Meta+BracketRight",
+  "meta+BracketRight": {
+    id: "meta+BracketRight",
     type: "browserDefault",
     name: "Open the next page in your browsing history for the current tab",
     platform: "mac",
@@ -163,8 +163,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+ArrowLeft": {
-    id: "Meta+ArrowLeft",
+  "meta+arrowleft": {
+    id: "meta+arrowleft",
     type: "browserDefault",
     name: "Open the previous page in your browsing history for the current tab",
     platform: "mac",
@@ -172,8 +172,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+BracketLeft": {
-    id: "Meta+BracketLeft",
+  "meta+BracketLeft": {
+    id: "meta+BracketLeft",
     type: "browserDefault",
     name: "Open the previous page in your browsing history for the current tab",
     platform: "mac",
@@ -181,8 +181,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+w": {
-    id: "Meta+w",
+  "meta+w": {
+    id: "meta+w",
     type: "browserDefault",
     name: "Close the current tab or pop-up",
     platform: "mac",
@@ -190,8 +190,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+w": {
-    id: "Meta+Shift+w",
+  "meta+shift+w": {
+    id: "meta+shift+w",
     type: "browserDefault",
     name: "Close the current window",
     platform: "mac",
@@ -199,8 +199,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+m": {
-    id: "Meta+m",
+  "meta+m": {
+    id: "meta+m",
     type: "browserDefault",
     name: "Minimize the window",
     platform: "mac",
@@ -208,8 +208,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+h": {
-    id: "Meta+h",
+  "meta+h": {
+    id: "meta+h",
     type: "browserDefault",
     name: "Hkeybinde Google Chrome",
     platform: "mac",
@@ -217,8 +217,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+q": {
-    id: "Meta+q",
+  "meta+q": {
+    id: "meta+q",
     type: "browserDefault",
     name: "Quit Google Chrome",
     platform: "mac",
@@ -226,8 +226,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+b": {
-    id: "Meta+Shift+b",
+  "meta+shift+b": {
+    id: "meta+shift+b",
     type: "browserDefault",
     name: "Show or hkeybinde the Bookmarks Bar",
     platform: "mac",
@@ -235,8 +235,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Option+b": {
-    id: "Meta+h",
+  "meta+option+b": {
+    id: "meta+h",
     type: "browserDefault",
     name: "Open the Bookmark Manager",
     platform: "mac",
@@ -244,8 +244,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+,": {
-    id: "Meta+,",
+  "meta+,": {
+    id: "meta+,",
     type: "browserDefault",
     name: "Open the Settings page in a new tab",
     platform: "mac",
@@ -253,8 +253,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+y": {
-    id: "Meta+y",
+  "meta+y": {
+    id: "meta+y",
     type: "browserDefault",
     name: "Open the History page in a new tab",
     platform: "mac",
@@ -262,8 +262,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+j": {
-    id: "Meta+Shift+j",
+  "meta+shift+j": {
+    id: "meta+shift+j",
     type: "browserDefault",
     name: "Open the Downloads page in a new tab",
     platform: "mac",
@@ -271,8 +271,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+f": {
-    id: "Meta+f",
+  "meta+f": {
+    id: "meta+f",
     type: "browserDefault",
     name: "Open the Find Bar to search the current page",
     platform: "mac",
@@ -280,8 +280,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+g": {
-    id: "Meta+g",
+  "meta+g": {
+    id: "meta+g",
     type: "browserDefault",
     name: "Jump to the next match to your Find Bar search",
     platform: "mac",
@@ -289,8 +289,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+f": {
-    id: "Meta+Shift+f",
+  "meta+shift+f": {
+    id: "meta+shift+f",
     type: "browserDefault",
     name: "Jump to the previous match to your Find Bar search",
     platform: "mac",
@@ -298,8 +298,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+e": {
-    id: "Meta+e",
+  "meta+e": {
+    id: "meta+e",
     type: "browserDefault",
     name: "When Find Bar is open, search for selected text",
     platform: "mac",
@@ -308,8 +308,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     conditional: true,
     condition: "When Find Bar is open",
   },
-  "Meta+Option+i": {
-    id: "Meta+Option+i",
+  "meta+option+i": {
+    id: "meta+option+i",
     type: "browserDefault",
     name: "Open Developer Tools",
     platform: "mac",
@@ -317,17 +317,17 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+Delete": {
-    id: "Meta+Shift+Delete",
+  "meta+shift+Delete": {
+    id: "meta+shift+Delete",
     type: "browserDefault",
-    name: "Open the Clear Browsing Data options",
+    name: "Open the Clear Browsing Data Options",
     platform: "mac",
     browser: "chrome",
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+m": {
-    id: "Meta+Shift+m",
+  "meta+shift+m": {
+    id: "meta+shift+m",
     type: "browserDefault",
     name: "Log in as a different user, browse as a Guest, or access payment and password info",
     platform: "mac",
@@ -344,8 +344,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Option+ArrowUp": {
-    id: "Meta+Option+ArrowUp",
+  "meta+option+arrowUp": {
+    id: "meta+option+arrowUp",
     type: "browserDefault",
     name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
     platform: "mac",
@@ -353,8 +353,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Option+ArrowDown": {
-    id: "Meta+Option+ArrowDown",
+  "meta+option+arrowDown": {
+    id: "meta+option+arrowDown",
     type: "browserDefault",
     name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
     platform: "mac",
@@ -362,8 +362,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+Option+i": {
-    id: "Meta+Shift+Option+i",
+  "meta+shift+option+i": {
+    id: "meta+shift+option+i",
     type: "browserDefault",
     name: "Open a feedback form",
     platform: "mac",
@@ -380,8 +380,8 @@ export const chromeDefaultKeyBind: { [key: string]: KeyBindInfo } = {
     capturable: false,
     conditional: false,
   },
-  "Meta+Shift+Option+a": {
-    id: "Meta+Shift+Option+a",
+  "meta+shift+option+a": {
+    id: "meta+shift+option+a",
     type: "browserDefault",
     name: "Focus on inactive dialogs",
     platform: "mac",
@@ -397,9 +397,9 @@ type NestedKeyBind = {
 
 export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
   return {
-    Meta: {
-      "Meta+a": {
-        id: "Meta+a",
+    meta: {
+      "meta+a": {
+        id: "meta+a",
         type: "browserDefault",
         name: "Select all",
         platform: "mac",
@@ -407,8 +407,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+e": {
-        id: "Meta+e",
+      "meta+e": {
+        id: "meta+e",
         type: "browserDefault",
         name: "When Find Bar is open, search for selected text",
         platform: "mac",
@@ -417,8 +417,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         conditional: true,
         condition: "When Find Bar is open",
       },
-      "Meta+f": {
-        id: "Meta+f",
+      "meta+f": {
+        id: "meta+f",
         type: "browserDefault",
         name: "Open the Find Bar to search the current page",
         platform: "mac",
@@ -426,8 +426,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+g": {
-        id: "Meta+g",
+      "meta+g": {
+        id: "meta+g",
         type: "browserDefault",
         name: "Jump to the next match to your Find Bar search",
         platform: "mac",
@@ -435,8 +435,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+h": {
-        id: "Meta+h",
+      "meta+h": {
+        id: "meta+h",
         type: "browserDefault",
         name: "Hkeybinde Google Chrome",
         platform: "mac",
@@ -444,8 +444,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+m": {
-        id: "Meta+m",
+      "meta+m": {
+        id: "meta+m",
         type: "browserDefault",
         name: "Minimize the window",
         platform: "mac",
@@ -453,8 +453,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+n": {
-        id: "Meta+n",
+      "meta+n": {
+        id: "meta+n",
         type: "browserDefault",
         name: "Open a new window",
         platform: "mac",
@@ -462,8 +462,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+q": {
-        id: "Meta+q",
+      "meta+q": {
+        id: "meta+q",
         type: "browserDefault",
         name: "Quit Google Chrome",
         platform: "mac",
@@ -471,8 +471,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+t": {
-        id: "Meta+t",
+      "meta+t": {
+        id: "meta+t",
         type: "browserDefault",
         name: "Open a new tab, and jump to it",
         platform: "mac",
@@ -480,8 +480,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+w": {
-        id: "Meta+w",
+      "meta+w": {
+        id: "meta+w",
         type: "browserDefault",
         name: "Close the current tab or pop-up",
         platform: "mac",
@@ -489,8 +489,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+y": {
-        id: "Meta+y",
+      "meta+y": {
+        id: "meta+y",
         type: "browserDefault",
         name: "Open the History page in a new tab",
         platform: "mac",
@@ -498,8 +498,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+1": {
-        id: "Meta+1",
+      "meta+1": {
+        id: "meta+1",
         type: "browserDefault",
         name: "Jump to tab 1",
         platform: "mac",
@@ -507,8 +507,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+2": {
-        id: "Meta+2",
+      "meta+2": {
+        id: "meta+2",
         type: "browserDefault",
         name: "Jump to tab 2",
         platform: "mac",
@@ -516,8 +516,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+3": {
-        id: "Meta+3",
+      "meta+3": {
+        id: "meta+3",
         type: "browserDefault",
         name: "Jump to tab 3",
         platform: "mac",
@@ -525,8 +525,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+4": {
-        id: "Meta+4",
+      "meta+4": {
+        id: "meta+4",
         type: "browserDefault",
         name: "Jump to tab 4",
         platform: "mac",
@@ -534,8 +534,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+5": {
-        id: "Meta+5",
+      "meta+5": {
+        id: "meta+5",
         type: "browserDefault",
         name: "Jump to tab 5",
         platform: "mac",
@@ -543,8 +543,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+6": {
-        id: "Meta+6",
+      "meta+6": {
+        id: "meta+6",
         type: "browserDefault",
         name: "Jump to tab 6",
         platform: "mac",
@@ -552,8 +552,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+7": {
-        id: "Meta+4",
+      "meta+7": {
+        id: "meta+4",
         type: "browserDefault",
         name: "Jump to tab 7",
         platform: "mac",
@@ -561,8 +561,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+8": {
-        id: "Meta+8",
+      "meta+8": {
+        id: "meta+8",
         type: "browserDefault",
         name: "Jump to tab 8",
         platform: "mac",
@@ -570,8 +570,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+9": {
-        id: "Meta+9",
+      "meta+9": {
+        id: "meta+9",
         type: "browserDefault",
         name: "Jump to tab last tab",
         platform: "mac",
@@ -579,8 +579,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+ArrowRight": {
-        id: "Meta+ArrowRight",
+      "meta+arrowRight": {
+        id: "meta+arrowRight",
         type: "browserDefault",
         name: "Open the next page in your browsing history for the current tab",
         platform: "mac",
@@ -588,8 +588,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+BracketRight": {
-        id: "Meta+BracketRight",
+      "meta+BracketRight": {
+        id: "meta+BracketRight",
         type: "browserDefault",
         name: "Open the next page in your browsing history for the current tab",
         platform: "mac",
@@ -597,8 +597,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+ArrowLeft": {
-        id: "Meta+ArrowLeft",
+      "meta+arrowleft": {
+        id: "meta+arrowleft",
         type: "browserDefault",
         name: "Open the previous page in your browsing history for the current tab",
         platform: "mac",
@@ -606,8 +606,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+BracketLeft": {
-        id: "Meta+BracketLeft",
+      "meta+BracketLeft": {
+        id: "meta+BracketLeft",
         type: "browserDefault",
         name: "Open the previous page in your browsing history for the current tab",
         platform: "mac",
@@ -615,8 +615,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+,": {
-        id: "Meta+,",
+      "meta+,": {
+        id: "meta+,",
         type: "browserDefault",
         name: "Open the Settings page in a new tab",
         platform: "mac",
@@ -625,9 +625,9 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         conditional: false,
       },
     },
-    "Meta+Shift": {
-      "Meta+Shift+b": {
-        id: "Meta+Shift+b",
+    "meta+shift": {
+      "meta+shift+b": {
+        id: "meta+shift+b",
         type: "browserDefault",
         name: "Show or hkeybinde the Bookmarks Bar",
         platform: "mac",
@@ -635,8 +635,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+f": {
-        id: "Meta+Shift+f",
+      "meta+shift+f": {
+        id: "meta+shift+f",
         type: "browserDefault",
         name: "Jump to the previous match to your Find Bar search",
         platform: "mac",
@@ -644,8 +644,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+i": {
-        id: "Meta+Option+i",
+      "meta+option+i": {
+        id: "meta+option+i",
         type: "browserDefault",
         name: "Open Developer Tools",
         platform: "mac",
@@ -653,8 +653,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+j": {
-        id: "Meta+Shift+j",
+      "meta+shift+j": {
+        id: "meta+shift+j",
         type: "browserDefault",
         name: "Open the Downloads page in a new tab",
         platform: "mac",
@@ -662,8 +662,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+m": {
-        id: "Meta+Shift+m",
+      "meta+shift+m": {
+        id: "meta+shift+m",
         type: "browserDefault",
         name: "Log in as a different user, browse as a Guest, or access payment and password info",
         platform: "mac",
@@ -671,8 +671,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+n": {
-        id: "Meta+Shift+n",
+      "meta+shift+n": {
+        id: "meta+shift+n",
         type: "browserDefault",
         name: "Open a new window in Incognito mode",
         platform: "mac",
@@ -680,8 +680,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+t": {
-        id: "Meta+Shift+t",
+      "meta+shift+t": {
+        id: "meta+shift+t",
         type: "browserDefault",
         name: "Reopen previously closed tabs in the order they were closed",
         platform: "mac",
@@ -689,8 +689,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+w": {
-        id: "Meta+Shift+w",
+      "meta+shift+w": {
+        id: "meta+shift+w",
         type: "browserDefault",
         name: "Close the current window",
         platform: "mac",
@@ -698,19 +698,19 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+Delete": {
-        id: "Meta+Shift+Delete",
+      "meta+shift+Delete": {
+        id: "meta+shift+Delete",
         type: "browserDefault",
-        name: "Open the Clear Browsing Data options",
+        name: "Open the Clear Browsing Data Options",
         platform: "mac",
         browser: "chrome",
         capturable: false,
         conditional: false,
       },
     },
-    "Meta+Option": {
-      "Meta+Option+b": {
-        id: "Meta+h",
+    "meta+option": {
+      "meta+option+b": {
+        id: "meta+h",
         type: "browserDefault",
         name: "Open the Bookmark Manager",
         platform: "mac",
@@ -718,8 +718,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+i": {
-        id: "Meta+Option+i",
+      "meta+option+i": {
+        id: "meta+option+i",
         type: "browserDefault",
         name: "Open Developer Tools",
         platform: "mac",
@@ -727,8 +727,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+ArrowRight": {
-        id: "Meta+Option+ArrowRight",
+      "meta+option+arrowRight": {
+        id: "meta+option+arrowRight",
         type: "browserDefault",
         name: "Jump to the next open tab",
         platform: "mac",
@@ -736,8 +736,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+ArrowLeft": {
-        id: "Meta+Option+ArrowLeft",
+      "meta+option+arrowleft": {
+        id: "meta+option+arrowleft",
         type: "browserDefault",
         name: "Jump to the previous open tab",
         platform: "mac",
@@ -745,8 +745,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+ArrowUp": {
-        id: "Meta+Option+ArrowUp",
+      "meta+option+arrowUp": {
+        id: "meta+option+arrowUp",
         type: "browserDefault",
         name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
         platform: "mac",
@@ -754,8 +754,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Option+ArrowDown": {
-        id: "Meta+Option+ArrowDown",
+      "meta+option+arrowDown": {
+        id: "meta+option+arrowDown",
         type: "browserDefault",
         name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
         platform: "mac",
@@ -764,9 +764,9 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         conditional: false,
       },
     },
-    "Meta+Shift+Option": {
-      "Meta+Shift+Option+a": {
-        id: "Meta+Shift+Option+a",
+    "meta+shift+option": {
+      "meta+shift+option+a": {
+        id: "meta+shift+option+a",
         type: "browserDefault",
         name: "Focus on inactive dialogs",
         platform: "mac",
@@ -774,8 +774,8 @@ export const chromeDefaultKeyBindNested = (): NestedKeyBind => {
         capturable: false,
         conditional: false,
       },
-      "Meta+Shift+Option+i": {
-        id: "Meta+Shift+Option+i",
+      "meta+shift+option+i": {
+        id: "meta+shift+option+i",
         type: "browserDefault",
         name: "Open a feedback form",
         platform: "mac",
@@ -812,9 +812,9 @@ type NestedKeyBindList = {
 };
 
 export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
-  Meta: [
+  meta: [
     {
-      id: "Meta+a",
+      id: "meta+a",
       type: "browserDefault",
       name: "Select all",
       platform: "mac",
@@ -823,7 +823,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+e",
+      id: "meta+e",
       type: "browserDefault",
       name: "When Find Bar is open, search for selected text",
       platform: "mac",
@@ -833,7 +833,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       condition: "When Find Bar is open",
     },
     {
-      id: "Meta+f",
+      id: "meta+f",
       type: "browserDefault",
       name: "Open the Find Bar to search the current page",
       platform: "mac",
@@ -842,7 +842,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+g",
+      id: "meta+g",
       type: "browserDefault",
       name: "Jump to the next match to your Find Bar search",
       platform: "mac",
@@ -851,7 +851,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+h",
+      id: "meta+h",
       type: "browserDefault",
       name: "Hkeybinde Google Chrome",
       platform: "mac",
@@ -860,7 +860,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+m",
+      id: "meta+m",
       type: "browserDefault",
       name: "Minimize the window",
       platform: "mac",
@@ -869,7 +869,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+n",
+      id: "meta+n",
       type: "browserDefault",
       name: "Open a new window",
       platform: "mac",
@@ -878,7 +878,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+q",
+      id: "meta+q",
       type: "browserDefault",
       name: "Quit Google Chrome",
       platform: "mac",
@@ -887,7 +887,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+t",
+      id: "meta+t",
       type: "browserDefault",
       name: "Open a new tab, and jump to it",
       platform: "mac",
@@ -896,7 +896,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+w",
+      id: "meta+w",
       type: "browserDefault",
       name: "Close the current tab or pop-up",
       platform: "mac",
@@ -905,7 +905,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+y",
+      id: "meta+y",
       type: "browserDefault",
       name: "Open the History page in a new tab",
       platform: "mac",
@@ -914,7 +914,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+1",
+      id: "meta+1",
       type: "browserDefault",
       name: "Jump to tab 1",
       platform: "mac",
@@ -923,7 +923,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+2",
+      id: "meta+2",
       type: "browserDefault",
       name: "Jump to tab 2",
       platform: "mac",
@@ -932,7 +932,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+3",
+      id: "meta+3",
       type: "browserDefault",
       name: "Jump to tab 3",
       platform: "mac",
@@ -941,7 +941,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+4",
+      id: "meta+4",
       type: "browserDefault",
       name: "Jump to tab 4",
       platform: "mac",
@@ -950,7 +950,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+5",
+      id: "meta+5",
       type: "browserDefault",
       name: "Jump to tab 5",
       platform: "mac",
@@ -959,7 +959,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+6",
+      id: "meta+6",
       type: "browserDefault",
       name: "Jump to tab 6",
       platform: "mac",
@@ -968,7 +968,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+4",
+      id: "meta+4",
       type: "browserDefault",
       name: "Jump to tab 7",
       platform: "mac",
@@ -977,7 +977,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+8",
+      id: "meta+8",
       type: "browserDefault",
       name: "Jump to tab 8",
       platform: "mac",
@@ -986,7 +986,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+9",
+      id: "meta+9",
       type: "browserDefault",
       name: "Jump to tab last tab",
       platform: "mac",
@@ -995,7 +995,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+ArrowRight",
+      id: "meta+arrowRight",
       type: "browserDefault",
       name: "Open the next page in your browsing history for the current tab",
       platform: "mac",
@@ -1004,7 +1004,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+BracketRight",
+      id: "meta+BracketRight",
       type: "browserDefault",
       name: "Open the next page in your browsing history for the current tab",
       platform: "mac",
@@ -1013,7 +1013,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+ArrowLeft",
+      id: "meta+arrowleft",
       type: "browserDefault",
       name: "Open the previous page in your browsing history for the current tab",
       platform: "mac",
@@ -1022,7 +1022,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+BracketLeft",
+      id: "meta+BracketLeft",
       type: "browserDefault",
       name: "Open the previous page in your browsing history for the current tab",
       platform: "mac",
@@ -1031,7 +1031,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+,",
+      id: "meta+,",
       type: "browserDefault",
       name: "Open the Settings page in a new tab",
       platform: "mac",
@@ -1040,9 +1040,9 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
   ],
-  "Meta+Shift": [
+  "meta+shift": [
     {
-      id: "Meta+Shift+b",
+      id: "meta+shift+b",
       type: "browserDefault",
       name: "Show or hkeybinde the Bookmarks Bar",
       platform: "mac",
@@ -1051,7 +1051,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+f",
+      id: "meta+shift+f",
       type: "browserDefault",
       name: "Jump to the previous match to your Find Bar search",
       platform: "mac",
@@ -1060,7 +1060,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+i",
+      id: "meta+option+i",
       type: "browserDefault",
       name: "Open Developer Tools",
       platform: "mac",
@@ -1069,7 +1069,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+j",
+      id: "meta+shift+j",
       type: "browserDefault",
       name: "Open the Downloads page in a new tab",
       platform: "mac",
@@ -1078,7 +1078,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+m",
+      id: "meta+shift+m",
       type: "browserDefault",
       name: "Log in as a different user, browse as a Guest, or access payment and password info",
       platform: "mac",
@@ -1087,7 +1087,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+n",
+      id: "meta+shift+n",
       type: "browserDefault",
       name: "Open a new window in Incognito mode",
       platform: "mac",
@@ -1096,7 +1096,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+t",
+      id: "meta+shift+t",
       type: "browserDefault",
       name: "Reopen previously closed tabs in the order they were closed",
       platform: "mac",
@@ -1105,7 +1105,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+w",
+      id: "meta+shift+w",
       type: "browserDefault",
       name: "Close the current window",
       platform: "mac",
@@ -1114,18 +1114,18 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+Delete",
+      id: "meta+shift+Delete",
       type: "browserDefault",
-      name: "Open the Clear Browsing Data options",
+      name: "Open the Clear Browsing Data Options",
       platform: "mac",
       browser: "chrome",
       capturable: false,
       conditional: false,
     },
   ],
-  "Meta+Option": [
+  "meta+option": [
     {
-      id: "Meta+h",
+      id: "meta+h",
       type: "browserDefault",
       name: "Open the Bookmark Manager",
       platform: "mac",
@@ -1134,7 +1134,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+i",
+      id: "meta+option+i",
       type: "browserDefault",
       name: "Open Developer Tools",
       platform: "mac",
@@ -1143,7 +1143,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+ArrowRight",
+      id: "meta+option+arrowRight",
       type: "browserDefault",
       name: "Jump to the next open tab",
       platform: "mac",
@@ -1152,7 +1152,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+ArrowLeft",
+      id: "meta+option+arrowleft",
       type: "browserDefault",
       name: "Jump to the previous open tab",
       platform: "mac",
@@ -1161,7 +1161,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+ArrowUp",
+      id: "meta+option+arrowUp",
       type: "browserDefault",
       name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
       platform: "mac",
@@ -1170,7 +1170,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Option+ArrowDown",
+      id: "meta+option+arrowDown",
       type: "browserDefault",
       name: "Cycle focus to unfocused dialog (if showing) and all toolbars",
       platform: "mac",
@@ -1179,9 +1179,9 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
   ],
-  "Meta+Shift+Option": [
+  "meta+shift+option": [
     {
-      id: "Meta+Shift+Option+a",
+      id: "meta+shift+option+a",
       type: "browserDefault",
       name: "Focus on inactive dialogs",
       platform: "mac",
@@ -1190,7 +1190,7 @@ export const chromeDefaultKeyBindNestedList: NestedKeyBindList = {
       conditional: false,
     },
     {
-      id: "Meta+Shift+Option+i",
+      id: "meta+shift+option+i",
       type: "browserDefault",
       name: "Open a feedback form",
       platform: "mac",
