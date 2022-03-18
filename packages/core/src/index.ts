@@ -4,6 +4,8 @@ import {
   chromeDefaultKeyBindNestedList,
 } from "./default-key-bind/chrome";
 
+export * from "./type/general";
+
 type Browser = "chrome" | "webkit" | "firefox";
 type OS = "windows" | "mac" | "linux";
 
@@ -53,7 +55,7 @@ const lookupChromeKeyBind = (key: string, os: OS): Result<KeyBindInfo> => {
  *
  */
 
-type functionKeySet =
+export type FunctionKeySet =
   | "Option"
   | "Meta"
   | "Control"
@@ -62,7 +64,7 @@ type functionKeySet =
   | "Mata+Shift+Option";
 
 export const findKeyBindsWithFunctionKeySet = (
-  key: functionKeySet,
+  key: FunctionKeySet,
   os: OS,
   browser: Browser
 ): Result<KeyBindInfo[]> => {
@@ -81,18 +83,27 @@ export const findKeyBindsWithFunctionKeySet = (
 };
 
 const findChormeKeyBinds = (
-  key: functionKeySet,
+  key: FunctionKeySet,
   os: OS
 ): Result<KeyBindInfo[]> => {
   switch (os) {
     case "mac": {
-      const targetList = chromeDefaultKeyBindNestedList[key];
-      if (typeof targetList !== "undefined") {
-        return { status: "success", value: targetList };
-      } else {
+      try {
+        const targetList = chromeDefaultKeyBindNestedList[key];
+        if (typeof targetList !== "undefined") {
+          return { status: "success", value: targetList };
+        } else {
+          return {
+            status: "error",
+            error: new Error("Key not found, you may have wrong function key"),
+          };
+        }
+      } catch (err) {
         return {
           status: "error",
-          error: new Error("Key not found, you may have wrong function key"),
+          error: new Error(
+            `Something went wrong when access chrome keybinds -> ${err}`
+          ),
         };
       }
     }
@@ -105,4 +116,28 @@ const findChormeKeyBinds = (
         ),
       };
   }
+};
+
+export type Modifiers = "shift" | "alt" | "ctrl" | "meta";
+
+export const getEventModifiers = (e: KeyboardEvent): Modifiers[] => {
+  let modifiers: Modifiers[] = [];
+
+  if (e.shiftKey) {
+    modifiers.push("shift");
+  }
+
+  if (e.altKey) {
+    modifiers.push("alt");
+  }
+
+  if (e.ctrlKey) {
+    modifiers.push("ctrl");
+  }
+
+  if (e.metaKey) {
+    modifiers.push("meta");
+  }
+
+  return modifiers;
 };
