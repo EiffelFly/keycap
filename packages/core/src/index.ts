@@ -142,7 +142,7 @@ export const getEventModifiers = (e: KeyboardEvent): Modifiers[] => {
   return modifiers;
 };
 
-const FUNCTION_KEY = [
+export const FUNCTION_KEY = [
   "ContextMenu",
   "Alt",
   "Meta",
@@ -171,7 +171,7 @@ const FUNCTION_KEY = [
   "Pause",
 ];
 
-const NUMPAD_KEY = [
+export const NUMPAD_KEY = [
   "NumLock",
   "Numpad0",
   "Numpad2",
@@ -192,7 +192,7 @@ const NUMPAD_KEY = [
   "NumpadSubtract",
 ];
 
-const NON_ALPHABET_KEY = [
+export const NON_ALPHABET_KEY = [
   "Comma",
   "Period",
   "Semicolon",
@@ -207,7 +207,7 @@ const NON_ALPHABET_KEY = [
   "IntlYen",
 ];
 
-const ALPHABET_KEY = [
+export const ALPHABET_KEY = [
   "Digit1",
   "Digit2",
   "Digit3",
@@ -246,24 +246,96 @@ const ALPHABET_KEY = [
   "KeyZ",
 ];
 
-export const getMatchedKey = (e: KeyboardEvent) => {
-  if (e.key) {
-    if (FUNCTION_KEY.includes(e.key)) {
-      return getFunctionKey(e);
+export const getMatchedKeys = (os: OS, browser: Browser, key: string) => {
+  switch (os) {
+    case "linux": {
+      getLinuxKeys(browser, key);
+      break;
     }
-
-    if (NON_ALPHABET_KEY.includes(e.key)) {
-      return getNonAlphabetKey(e);
+    case "mac": {
+      const keys = getMacKeys(browser, key);
+      console.log(keys);
+      break;
     }
-
-    if (NUMPAD_KEY.includes(e.key)) {
-      return getNumpagKey(e);
+    case "windows": {
+      getWindowsKeys(browser, key);
+      break;
     }
-
-    if (ALPHABET_KEY.includes(e.key)) {
-      return getAlphabetKey(e);
+    default: {
+      throw new Error(
+        `Keycap now only support Linux, Mac and Windows, you could submit issue to support - ${os}`
+      );
     }
   }
 };
 
-const getFunctionKey = (e: KeyboardEvent) => {};
+const getLinuxKeys = (browser: Browser, key: string) => {
+  switch (browser) {
+    case "chrome": {
+      getChromeKeys(key);
+      break;
+    }
+    case "firefox": {
+      getFirefoxKeys(key);
+      break;
+    }
+    case "webkit": {
+      getWebkitKeys(key);
+      break;
+    }
+  }
+};
+
+const getMacKeys = (browser: Browser, key: string) => {
+  switch (browser) {
+    case "chrome": {
+      getChromeKeys(key);
+      break;
+    }
+    case "firefox": {
+      getFirefoxKeys(key);
+      break;
+    }
+    case "webkit": {
+      getWebkitKeys(key);
+      break;
+    }
+  }
+};
+
+const getWindowsKeys = (browser: Browser, key: string) => {
+  switch (browser) {
+    case "chrome": {
+      getChromeKeys(key);
+      break;
+    }
+    case "firefox": {
+      getFirefoxKeys(key);
+      break;
+    }
+    case "webkit": {
+      getWebkitKeys(key);
+      break;
+    }
+  }
+};
+
+const getChromeKeys = (key: string) => {
+  try {
+    const keys = chromeDefaultKeyBindNestedList[key];
+    return keys;
+  } catch (err) {
+    console.log(err);
+    throw new Error(
+      `Something when wrong when try to get chrome default keybind - ${err}`
+    );
+  }
+};
+
+const getFirefoxKeys = (key: string) => {
+  console.log(key);
+};
+
+const getWebkitKeys = (key: string) => {
+  console.log(key);
+};
