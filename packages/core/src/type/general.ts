@@ -20,3 +20,21 @@ export interface BrowserKeybindSet {
   chrome: { [key: string]: KeyBindInfo };
   linux: { [key: string]: KeyBindInfo };
 }
+
+export type FunctionKeySet =
+  | "Option"
+  | "Meta"
+  | "Control"
+  | "Meta+Option"
+  | "Meta+Shift"
+  | "Mata+Shift+Option";
+
+export type Browser = "chrome" | "webkit" | "firefox";
+export type OS = "windows" | "mac" | "linux";
+export type Modifiers = "shift" | "alt" | "ctrl" | "meta";
+
+type ResultSuccess<T> = { status: "success"; value: T };
+
+type ResultError = { status: "error"; error: Error };
+
+export type Result<T> = ResultSuccess<T> | ResultError;
