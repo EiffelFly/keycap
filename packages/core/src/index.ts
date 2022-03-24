@@ -82,21 +82,23 @@ export * from "./type/general";
 //   }
 // };
 
-const getMatchedKeys = (os: OS, browser: Browser, key: string) => {
+const getMatchedKeys = (
+  os: OS,
+  browser: Browser,
+  key: string
+): Result<KeyBindInfo[]> => {
   switch (os) {
-    case "linux": {
-      getLinuxKeys(browser, key);
-      break;
-    }
+    // case "linux": {
+    //   getLinuxKeys(browser, key);
+    //   break;
+    // }
     case "mac": {
-      const keys = getMacKeys(browser, key);
-      console.log(keys);
-      break;
+      return getMacKeys(browser, key);
     }
-    case "windows": {
-      getWindowsKeys(browser, key);
-      break;
-    }
+    // case "windows": {
+    //   getWindowsKeys(browser, key);
+    //   break;
+    // }
     default: {
       throw new Error(
         `Keycap now only support Linux, Mac and Windows, you could submit issue to support - ${os}`
@@ -105,34 +107,34 @@ const getMatchedKeys = (os: OS, browser: Browser, key: string) => {
   }
 };
 
-const getLinuxKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
-  switch (browser) {
-    case "chrome": {
-      return {
-        status: "success",
-        value: getChromeKeys(key),
-      };
-    }
-    default: {
-      return {
-        status: "error",
-        error: new Error(
-          `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
-        ),
-      };
-    }
-    // case "firefox": {
-    //   return {
-    //     status: "success",
-    //     value: getFirefoxKeys(key),
-    //   };
-    // }
-    // case "webkit": {
-    //   getWebkitKeys(key);
-    //   break;
-    // }
-  }
-};
+// const getLinuxKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
+//   switch (browser) {
+//     case "chrome": {
+//       return {
+//         status: "success",
+//         value: getChromeKeys(key),
+//       };
+//     }
+//     default: {
+//       return {
+//         status: "error",
+//         error: new Error(
+//           `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
+//         ),
+//       };
+//     }
+//     // case "firefox": {
+//     //   return {
+//     //     status: "success",
+//     //     value: getFirefoxKeys(key),
+//     //   };
+//     // }
+//     // case "webkit": {
+//     //   getWebkitKeys(key);
+//     //   break;
+//     // }
+//   }
+// };
 
 const getMacKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
   switch (browser) {
@@ -161,35 +163,35 @@ const getMacKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
   }
 };
 
-const getWindowsKeys = (
-  browser: Browser,
-  key: string
-): Result<KeyBindInfo[]> => {
-  switch (browser) {
-    case "chrome": {
-      return {
-        status: "success",
-        value: getChromeKeys(key),
-      };
-    }
-    default: {
-      return {
-        status: "error",
-        error: new Error(
-          `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
-        ),
-      };
-    }
-    // case "firefox": {
-    //   getFirefoxKeys(key);
-    //   break;
-    // }
-    // case "webkit": {
-    //   getWebkitKeys(key);
-    //   break;
-    // }
-  }
-};
+// const getWindowsKeys = (
+//   browser: Browser,
+//   key: string
+// ): Result<KeyBindInfo[]> => {
+//   switch (browser) {
+//     case "chrome": {
+//       return {
+//         status: "success",
+//         value: getChromeKeys(key),
+//       };
+//     }
+//     default: {
+//       return {
+//         status: "error",
+//         error: new Error(
+//           `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
+//         ),
+//       };
+//     }
+//     // case "firefox": {
+//     //   getFirefoxKeys(key);
+//     //   break;
+//     // }
+//     // case "webkit": {
+//     //   getWebkitKeys(key);
+//     //   break;
+//     // }
+//   }
+// };
 
 const getChromeKeys = (key: string) => {
   try {
