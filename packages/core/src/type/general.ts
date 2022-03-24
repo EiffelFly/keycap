@@ -29,12 +29,21 @@ export type FunctionKeySet =
   | "Meta+Shift"
   | "Mata+Shift+Option";
 
-export type Browser = "chrome" | "webkit" | "firefox";
-export type OS = "windows" | "mac" | "linux";
+export enum Browser {
+  "chrome" = "chrome",
+  "webkit" = "webkit",
+  "firefox" = "firefox",
+}
+export enum OS {
+  "windows" = "windows",
+  "mac" = "mac",
+  "linux" = "linux",
+}
+
 export type Modifiers = "shift" | "alt" | "ctrl" | "meta";
 
-type ResultSuccess<T> = { status: "success"; value: T };
+type ResultSuccess<T> = { status: "success"; value: T; error: null };
 
-type ResultError = { status: "error"; error: Error };
+type ResultError = { status: "error"; value: null; error: Error };
 
 export type Result<T> = ResultSuccess<T> | ResultError;
