@@ -29,16 +29,9 @@ export type FunctionKeySet =
   | "Meta+Shift"
   | "Mata+Shift+Option";
 
-export enum Browser {
-  "chrome" = "chrome",
-  "webkit" = "webkit",
-  "firefox" = "firefox",
-}
-export enum OS {
-  "windows" = "windows",
-  "mac" = "mac",
-  "linux" = "linux",
-}
+export type Browser = "chrome" | "webkit" | "firefox";
+
+export type OS = "windows" | "mac" | "linux";
 
 export type Modifiers = "shift" | "alt" | "ctrl" | "meta";
 
