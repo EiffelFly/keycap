@@ -87,13 +87,13 @@ const getMatchedKeys = (
   browser: Browser,
   key: string
 ): Result<KeyBindInfo[]> => {
-  switch (os) {
+  switch (browser) {
     // case "linux": {
     //   getLinuxKeys(browser, key);
     //   break;
     // }
-    case "mac": {
-      return getMacKeys(browser, key);
+    case "chrome": {
+      return getChromeKeys(os, key);
     }
     // case "windows": {
     //   getWindowsKeys(browser, key);
@@ -107,96 +107,31 @@ const getMatchedKeys = (
   }
 };
 
-// const getLinuxKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
-//   switch (browser) {
-//     case "chrome": {
-//       return {
-//         status: "success",
-//         value: getChromeKeys(key),
-//       };
-//     }
-//     default: {
-//       return {
-//         status: "error",
-//         error: new Error(
-//           `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
-//         ),
-//       };
-//     }
-//     // case "firefox": {
-//     //   return {
-//     //     status: "success",
-//     //     value: getFirefoxKeys(key),
-//     //   };
-//     // }
-//     // case "webkit": {
-//     //   getWebkitKeys(key);
-//     //   break;
-//     // }
-//   }
-// };
+const getChromeKeys = (os: OS, key: string): Result<KeyBindInfo[]> => {
+  try {
+    const browserSpecificKeybinds = chromeDefaultKeyBindNestedList[os];
 
-const getMacKeys = (browser: Browser, key: string): Result<KeyBindInfo[]> => {
-  switch (browser) {
-    case "chrome": {
-      return {
-        status: "success",
-        value: getChromeKeys(key),
-      };
-    }
-    default: {
+    if (typeof browserSpecificKeybinds === "undefined") {
       return {
         status: "error",
+        value: null,
         error: new Error(
-          `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
+          `Keycap now only support Linux, Mac and Windows, you could submit issue to support - ${os}`
         ),
       };
     }
-    // case "firefox": {
-    //   getFirefoxKeys(key);
-    //   break;
-    // }
-    // case "webkit": {
-    //   getWebkitKeys(key);
-    //   break;
-    // }
-  }
-};
 
-// const getWindowsKeys = (
-//   browser: Browser,
-//   key: string
-// ): Result<KeyBindInfo[]> => {
-//   switch (browser) {
-//     case "chrome": {
-//       return {
-//         status: "success",
-//         value: getChromeKeys(key),
-//       };
-//     }
-//     default: {
-//       return {
-//         status: "error",
-//         error: new Error(
-//           `Browser ${browser} not found, Keycap now only support major os browser included Chrom, Webkit and Firefox`
-//         ),
-//       };
-//     }
-//     // case "firefox": {
-//     //   getFirefoxKeys(key);
-//     //   break;
-//     // }
-//     // case "webkit": {
-//     //   getWebkitKeys(key);
-//     //   break;
-//     // }
-//   }
-// };
+    let keys = browserSpecificKeybinds[key];
 
-const getChromeKeys = (key: string) => {
-  try {
-    const keys = chromeDefaultKeyBindNestedList[key];
-    return keys;
+    if (typeof keys === "undefined") {
+      keys = [];
+    }
+
+    return {
+      status: "success",
+      value: keys,
+      error: null,
+    };
   } catch (err) {
     console.log(err);
     throw new Error(
