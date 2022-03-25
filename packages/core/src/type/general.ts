@@ -33,9 +33,13 @@ export type Browser = "chrome" | "webkit" | "firefox";
 
 export type OS = "windows" | "mac" | "linux";
 
-export type Modifiers = "shift" | "alt" | "ctrl" | "meta";
+export type Modifiers = "Shift" | "Alt" | "Option" | "Ctrl" | "Meta";
 
-type ResultSuccess<T> = { status: "success"; value: T; error: null };
+type ResultSuccess<T> = {
+  status: "success" | "notFound";
+  value: T;
+  error: null;
+};
 
 type ResultError = { status: "error"; value: null; error: Error };
 
