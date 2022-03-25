@@ -1,25 +1,50 @@
-import { Modifiers } from "./type/general";
+import { Modifiers, OS } from "./type/general";
 
-export const getEventModifiers = (e: KeyboardEvent): Modifiers[] => {
+/**
+ * This function will get KeybordEvent's modifiers, with order below
+ * Meta -> Shift -> Alt | Option -> Ctrl
+ *
+ * @param e KeyboardEvent
+ * @returns
+ */
+
+export const getEventModifiers = (e: KeyboardEvent, os: OS): Modifiers[] => {
   let modifiers: Modifiers[] = [];
 
+  if (e.metaKey) {
+    modifiers.push("Meta");
+  }
+
   if (e.shiftKey) {
-    modifiers.push("shift");
+    modifiers.push("Shift");
   }
 
   if (e.altKey) {
-    modifiers.push("alt");
+    modifiers.push(os === "mac" ? "Option" : "Alt");
   }
 
   if (e.ctrlKey) {
-    modifiers.push("ctrl");
-  }
-
-  if (e.metaKey) {
-    modifiers.push("meta");
+    modifiers.push("Ctrl");
   }
 
   return modifiers;
+};
+
+export const modifiers = ["Meta", "Shift", "Option", "Alt", "Ctrl"];
+
+export const isCompleteKeybind = (e: KeyboardEvent, os: OS): boolean => {
+  const currentModifiers = getEventModifiers(e, os);
+  if (currentModifiers.length === 0) {
+    return false;
+  }
+
+  // If the current key is modifiers, that is not a set of complete keybind
+
+  if (modifiers.includes(e.key)) {
+    return false;
+  }
+
+  return true;
 };
 
 export const ALPHABET_KEY = [
@@ -97,8 +122,7 @@ export const NUMPAD_KEY = [
   "NumpadSubtract",
 ];
 
-export 
-const FUNCTION_KEY = [
+export const FUNCTION_KEY = [
   "ContextMenu",
   "Alt",
   "Meta",
