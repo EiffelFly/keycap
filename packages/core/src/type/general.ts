@@ -41,6 +41,6 @@ type ResultSuccess<T> = {
   error: null;
 };
 
-type ResultError = { status: "error"; value: null; error: Error };
+type ResultError = { status: "error"; value: []; error: Error };
 
 export type Result<T> = ResultSuccess<T> | ResultError;

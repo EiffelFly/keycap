@@ -90,7 +90,7 @@ const getMatchedKeys = (
   os: OS,
   browser: Browser,
   event: KeyboardEvent
-): Result<KeyBindInfo | KeyBindInfo[] | null> => {
+): Result<KeyBindInfo | KeyBindInfo[] | []> => {
   const modifiers = getEventModifiers(event, os);
 
   switch (browser) {
@@ -126,29 +126,29 @@ const getMatchedKeys = (
 const getChromeKeybindsByModifiers = (
   os: OS,
   key: string
-): Result<KeyBindInfo[]> => {
+): Result<KeyBindInfo[] | []> => {
   try {
     const browserSpecificKeybinds = chromeDefaultKeyBindNestedList[os];
 
     if (typeof browserSpecificKeybinds === "undefined") {
       return {
         status: "error",
-        value: null,
+        value: [],
         error: new Error(
           `Keycap now only support Linux, Mac and Windows, you could submit issue to support - ${os}`
         ),
       };
     }
 
-    let keys = browserSpecificKeybinds[key];
+    let keybinds = browserSpecificKeybinds[key];
 
-    if (typeof keys === "undefined") {
-      keys = [];
+    if (typeof keybinds === "undefined") {
+      keybinds = [];
     }
 
     return {
       status: "success",
-      value: keys,
+      value: keybinds,
       error: null,
     };
   } catch (err) {
@@ -159,7 +159,7 @@ const getChromeKeybindsByModifiers = (
   }
 };
 
-const getChromeKeybind = (key: string, os: OS): Result<KeyBindInfo | null> => {
+const getChromeKeybind = (key: string, os: OS): Result<KeyBindInfo[] | []> => {
   try {
     const browserSpecificKeybinds = chromeDefaultKeyBind[os];
 
@@ -169,20 +169,19 @@ const getChromeKeybind = (key: string, os: OS): Result<KeyBindInfo | null> => {
       );
     }
 
-    let keybind: KeyBindInfo | null = browserSpecificKeybinds[key];
+    let keybind: KeyBindInfo | undefined = browserSpecificKeybinds[key];
 
     if (typeof keybind === "undefined") {
-      keybind = null;
       return {
         status: "notFound",
-        value: keybind,
+        value: [],
         error: null,
       };
     }
 
     return {
       status: "success",
-      value: keybind,
+      value: [keybind],
       error: null,
     };
   } catch (err) {
