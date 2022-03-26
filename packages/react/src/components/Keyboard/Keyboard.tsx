@@ -1,24 +1,36 @@
 import { FC, useEffect } from "react";
-import { getKeyboardLayout } from "../services/KeyboardLayout";
-import { specialKeyDisplayName } from "../services/Utils";
-import "./css/Keyboard.css";
+import { getKeyboardLayout } from "../../services/KeyboardLayout";
+import { specialKeyDisplayName } from "../../services/Utils";
+import "./Keyboard.css";
+import * as classNames from "classnames";
+import { getMatchedKeys } from "@keycap/core";
 
 export interface KeyboardProps {}
 
 const Keyboard: FC<KeyboardProps> = () => {
+  // const [currentKeybinds, setCurrentKeybinds] = useState<KeyBindInfo[]>();
+  // const [currentFunctionKeySet, setCurrentFunctionKeySet] = useState<string>();
+  // const [onCtrl, setOnCtrl] = useState(false);
+
   const keydownHandler = (e: KeyboardEvent) => {
-    console.log(e.key)
-    if (e.key === "n" && e.metaKey) {
-      console.log(e)
-      e.preventDefault();
-      e.stopPropagation();
-      alert("captured");
-    }
+    console.log("keydown", e);
+
+    const { value } = getMatchedKeys("mac", "chrome", e);
+
+    console.log(value);
+  };
+
+  const keyupHandler = (e: KeyboardEvent) => {
+    console.log("keyup", e);
   };
 
   useEffect(() => {
     document.addEventListener("keydown", keydownHandler, false);
-    return;
+    document.addEventListener("keyup", keyupHandler, false);
+    return () => {
+      document.removeEventListener("keydown", keydownHandler);
+      document.removeEventListener("keyup", keyupHandler);
+    };
   }, []);
 
   return (
@@ -32,11 +44,11 @@ const Keyboard: FC<KeyboardProps> = () => {
 
             return (
               <button
-                className={
+                className={classNames.default(
                   keycap.match(/{*.}/)
                     ? "keycap-special-key"
                     : "keycap-standard-key"
-                }
+                )}
                 key={`keycap-${keycap}-${index}`}
               >
                 {displayName}
