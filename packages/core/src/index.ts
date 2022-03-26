@@ -1,5 +1,9 @@
-import { chromeDefaultKeyBindNestedList } from "./default-key-bind/chrome";
+import {
+  chromeDefaultKeyBind,
+  chromeDefaultKeyBindNestedList,
+} from "./default-key-bind/chrome";
 import { Browser, KeyBindInfo, OS, Result } from "./type/general";
+import { getEventModifiers, isCompleteKeybind } from "./utils";
 
 export * from "./type/general";
 
@@ -85,15 +89,27 @@ export * from "./type/general";
 const getMatchedKeys = (
   os: OS,
   browser: Browser,
-  key: string
-): Result<KeyBindInfo[]> => {
+  event: KeyboardEvent
+): Result<KeyBindInfo | KeyBindInfo[] | null> => {
+  const modifiers = getEventModifiers(event, os);
+
   switch (browser) {
-    // case "linux": {
+    // case "linux": {.
     //   getLinuxKeys(browser, key);
     //   break;
     // }
     case "chrome": {
-      return getChromeKeys(os, key);
+      if (isCompleteKeybind(event, os)) {
+        const key = modifiers.join("+") + "+" + event.key;
+
+        console.log(key);
+
+        return getChromeKeybind(key, os);
+      }
+
+      const key = modifiers.join("+");
+
+      return getChromeKeybindsByModifiers(os, key);
     }
     // case "windows": {
     //   getWindowsKeys(browser, key);
@@ -107,7 +123,10 @@ const getMatchedKeys = (
   }
 };
 
-const getChromeKeys = (os: OS, key: string): Result<KeyBindInfo[]> => {
+const getChromeKeybindsByModifiers = (
+  os: OS,
+  key: string
+): Result<KeyBindInfo[]> => {
   try {
     const browserSpecificKeybinds = chromeDefaultKeyBindNestedList[os];
 
@@ -135,7 +154,41 @@ const getChromeKeys = (os: OS, key: string): Result<KeyBindInfo[]> => {
   } catch (err) {
     console.log(err);
     throw new Error(
-      `Something when wrong when try to get chrome default keybind - ${err}`
+      `Something when wrong when try to get chrome's keybinds by key - ${key}: - ${err}`
+    );
+  }
+};
+
+const getChromeKeybind = (key: string, os: OS): Result<KeyBindInfo | null> => {
+  try {
+    const browserSpecificKeybinds = chromeDefaultKeyBind[os];
+
+    if (typeof browserSpecificKeybinds === "undefined") {
+      throw new Error(
+        `OS: ${os} not found, Keycap now only support major os system included Mac, Windows and Linux`
+      );
+    }
+
+    let keybind: KeyBindInfo | null = browserSpecificKeybinds[key];
+
+    if (typeof keybind === "undefined") {
+      keybind = null;
+      return {
+        status: "notFound",
+        value: keybind,
+        error: null,
+      };
+    }
+
+    return {
+      status: "success",
+      value: keybind,
+      error: null,
+    };
+  } catch (err) {
+    console.log(err);
+    throw new Error(
+      `Something when wrong when try to get chrome's keybinds by key - ${key}: - ${err}`
     );
   }
 };
