@@ -7,7 +7,7 @@ import { getMatchedKeys } from "@keycap/core";
 
 export interface KeyboardProps {}
 
-const Keyboard: FC<KeyboardProps> = () => {
+export const Keyboard: FC<KeyboardProps> = () => {
   // const [currentKeybinds, setCurrentKeybinds] = useState<KeyBindInfo[]>();
   // const [currentFunctionKeySet, setCurrentFunctionKeySet] = useState<string>();
   // const [onCtrl, setOnCtrl] = useState(false);
@@ -60,5 +60,3 @@ const Keyboard: FC<KeyboardProps> = () => {
     </div>
   );
 };
-
-export default Keyboard;
