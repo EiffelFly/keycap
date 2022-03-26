@@ -34,12 +34,13 @@ export const modifiers = ["Meta", "Shift", "Option", "Alt", "Ctrl"];
 
 export const isCompleteKeybind = (e: KeyboardEvent, os: OS): boolean => {
   const currentModifiers = getEventModifiers(e, os);
+
+  // If the current key doesn't include any modifier, it's not a set of complete keybind
   if (currentModifiers.length === 0) {
     return false;
   }
 
-  // If the current key is modifiers, that is not a set of complete keybind
-
+  // If the current key is modifiers, it is not a set of complete keybind
   if (modifiers.includes(e.key)) {
     return false;
   }
