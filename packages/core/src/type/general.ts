@@ -33,7 +33,13 @@ export type Browser = "chrome" | "webkit" | "firefox";
 
 export type OS = "windows" | "mac" | "linux";
 
-export type Modifiers = "Shift" | "Alt" | "Option" | "Ctrl" | "Meta";
+export type Modifiers =
+  | "Shift"
+  | "Alt"
+  | "Option"
+  | "Ctrl"
+  | "Control"
+  | "Meta";
 
 type ResultSuccess<T> = {
   status: "success" | "notFound";

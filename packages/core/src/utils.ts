@@ -24,7 +24,7 @@ export const getEventModifiers = (e: KeyboardEvent, os: OS): Modifiers[] => {
   }
 
   if (e.ctrlKey) {
-    modifiers.push("Ctrl");
+    modifiers.push(os === "mac" ? "Control" : "Ctrl");
   }
 
   return modifiers;
