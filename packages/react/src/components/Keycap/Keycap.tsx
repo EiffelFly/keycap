@@ -4,12 +4,12 @@ import cn from "clsx";
 import "./Keycap.css";
 import { useRenderCounter } from "../../hooks/useRenderCounter";
 
-export interface KeyProps {
+export interface KeycapProps {
   keycap: string;
   isTarget: boolean;
 }
 
-export const Keycap: FC<KeyProps> = memo(({ keycap, isTarget }) => {
+export const Keycap: FC<KeycapProps> = memo(({ keycap, isTarget }) => {
   const displayName = keycap.match(/{*.}/)
     ? specialKeyDisplayName[keycap]
     : keycap;
@@ -27,3 +27,5 @@ export const Keycap: FC<KeyProps> = memo(({ keycap, isTarget }) => {
     </button>
   );
 });
+
+Keycap.displayName = "Keycap";
