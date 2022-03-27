@@ -30,7 +30,7 @@ export const getEventModifiers = (e: KeyboardEvent, os: OS): Modifiers[] => {
   return modifiers;
 };
 
-export const modifiers = ["Meta", "Shift", "Option", "Alt", "Ctrl"];
+export const modifiers = ["Meta", "Shift", "Option", "Alt", "Ctrl", "Control"];
 
 export const isCompleteKeybind = (e: KeyboardEvent, os: OS): boolean => {
   const currentModifiers = getEventModifiers(e, os);
