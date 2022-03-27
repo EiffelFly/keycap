@@ -15,13 +15,16 @@ export const Keyboard: FC<KeyboardProps> = () => {
     <div className="keycap-keyboard-container">
       {getKeyboardLayout().default.map((row, index) => (
         <div className="keycap-keyboard-row" key={`keycap-row-${index}`}>
-          {row.split(" ").map((keycap, index) => (
-            <Keycap
-              key={`keycap-${keycap}-${index}`}
-              isTarget={false}
-              keycap={keycap}
-            />
-          ))}
+          {row.split(" ").map((keycap, index) => {
+            const targetIdx = keybinds.findIndex((e) => e.id.includes(keycap));
+            return (
+              <Keycap
+                key={`keycap-${keycap}-${index}`}
+                isTarget={targetIdx === -1 ? false : true}
+                keycap={keycap}
+              />
+            );
+          })}
         </div>
       ))}
     </div>
