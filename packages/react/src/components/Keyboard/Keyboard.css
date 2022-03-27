@@ -9,29 +9,3 @@
   flex-direction: row;
   column-gap: 10px;
 }
-
-.keycap-special-key {
-  padding: 16px 48px;
-  border: 1px solid black;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  cursor: pointer;
-}
-
-.keycap-standard-key {
-  padding: 16px 30px;
-  border: 1px solid black;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  cursor: pointer;
-}
-
-.keycap-standard-key:focus {
-  background-color: rgb(229 231 235);
-}
-
-.keycap-special-key:focus {
-  background-color: rgb(229 231 235);
-}
