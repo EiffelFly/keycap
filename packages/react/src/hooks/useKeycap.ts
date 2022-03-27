@@ -1,21 +1,35 @@
-import { Browser, getMatchedKeys, KeyBindInfo, OS } from "@keycap/core";
+import { Browser, getMatchedKeys, OS } from "@keycap/core";
 import { useEffect, useState } from "react";
+import { UseKeycapResult } from "../types/general";
 
-export const useKeycap = (browser: Browser, os: OS) => {
-  const [currentKeybinds, setCurrentKeybinds] = useState<
-    KeyBindInfo[] | KeyBindInfo | []
-  >([]);
+export const useKeycap = (browser: Browser, os: OS): UseKeycapResult => {
+  const [useKeycapResult, setUseKeycapResult] = useState<UseKeycapResult>({
+    key: null,
+    keybinds: [],
+  });
+
+  console.log("render");
 
   const keydownHandler = (e: KeyboardEvent) => {
     console.log("keydown", e);
-
     const { value } = getMatchedKeys(os, browser, e);
 
-    setCurrentKeybinds(value);
+    if (e.repeat) {
+      return;
+    }
+
+    setUseKeycapResult({
+      key: e,
+      keybinds: value,
+    });
   };
 
-  const keyupHandler = (e: KeyboardEvent) => {
-    console.log("keyup", e);
+  const keyupHandler = () => {
+    console.log("keyup");
+    setUseKeycapResult({
+      key: null,
+      keybinds: [],
+    });
   };
 
   useEffect(() => {
@@ -27,7 +41,5 @@ export const useKeycap = (browser: Browser, os: OS) => {
     };
   }, []);
 
-  return {
-    keybinds: currentKeybinds,
-  };
+  return useKeycapResult;
 };
