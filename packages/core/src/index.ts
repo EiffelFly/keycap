@@ -90,7 +90,7 @@ const getMatchedKeys = (
   os: OS,
   browser: Browser,
   event: KeyboardEvent
-): Result<KeyBindInfo | KeyBindInfo[] | []> => {
+): Result<KeyBindInfo[] | []> => {
   const modifiers = getEventModifiers(event, os);
 
   switch (browser) {
