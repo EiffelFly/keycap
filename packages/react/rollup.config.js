@@ -6,8 +6,8 @@ import {
   resolve,
   typescript,
   terser,
+  babel,
 } from "../../rollup.config.js";
-
 const packageJson = require("./package.json");
 
 export default [
